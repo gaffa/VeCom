@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <eclipse-userlibraries>
-  <library name="sass-stdlib" />
   <library name="groovy-2.0.5">
     <archive path="C:/Program Files/groovy-2.0.5/lib/ant-1.8.4.jar" />
     <archive path="C:/Program Files/groovy-2.0.5/lib/ant-antlr-1.8.4.jar" />
