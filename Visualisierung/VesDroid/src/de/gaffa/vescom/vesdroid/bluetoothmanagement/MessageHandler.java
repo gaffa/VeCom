@@ -95,6 +95,9 @@ public class MessageHandler extends Handler {
      * @return
      */
     private Integer convertDiffToRpm(Integer diff) {
+        if(diff == 0){
+            return 0;
+        }
         return controllerTicksPerSecond / diff / ignitionSignalsPerRound * 60;
     }
 
@@ -105,6 +108,9 @@ public class MessageHandler extends Handler {
      * @return
      */
     private Integer convertDiffToV(Integer diff) {
+        if(diff == 0){
+            return 0;
+        }
         return controllerTicksPerSecond / diff / 3600 * wheelCircumference / 10 ^ 5;
     }
 

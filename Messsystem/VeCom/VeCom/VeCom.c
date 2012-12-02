@@ -1,3 +1,5 @@
+#define F_CPU 8000000UL
+
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
@@ -88,13 +90,16 @@ int main(void){
 
 	while(1){
 		// send a packet every quarter second
-		if(lastPacketSendTime == 0 || TCNT1 - lastPacketSendTime >= TICKS_PER_QUARTER_SECOND){
+		// todo: reset to quarter second
+		if(lastPacketSendTime == 0 || TCNT1 - lastPacketSendTime >= TICKS_PER_SECOND){
 			sendPacket(rpm_diff, v_diff, egtValue);
+			lastPacketSendTime = TCNT1;
 		}
 
 		// measure egt every second
 		if(lastEGTMeasureTime == 0 || TCNT1 - lastEGTMeasureTime >= TICKS_PER_SECOND){
 			egtValue = get_egt();
+			lastEGTMeasureTime = TCNT1;
 		}
 	}
 }

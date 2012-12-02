@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.android.BluetoothChat.DeviceListActivity;
@@ -80,6 +81,7 @@ public class VesDroidActivity extends Activity {
             finish();
             return;
         }
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
     /**
