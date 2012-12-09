@@ -26,7 +26,6 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.android.BluetoothChat.DeviceListActivity;
-import com.example.android.BluetoothChat.R;
 import de.gaffa.vescom.vesdroid.bluetoothmanagement.BluetoothManagement;
 import de.gaffa.vescom.vesdroid.bluetoothmanagement.MessageHandler;
 import de.gaffa.vescom.vesdroid.exceptions.BluetoothNotAvailableException;

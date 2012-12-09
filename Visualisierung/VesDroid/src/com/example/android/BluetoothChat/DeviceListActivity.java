@@ -31,6 +31,8 @@ import android.widget.TextView;
 
 import java.util.Set;
 
+import de.gaffa.vescom.vesdroid.R;
+
 /**
  * This Activity appears as a dialog. It lists any paired devices and
  * devices detected in the area after discovery. When a device is chosen
